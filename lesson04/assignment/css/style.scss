@@ -3,9 +3,15 @@
 }
 
 .circle {
+<<<<<<< HEAD
   display: flex;
   height: 100px;
   width: 100px;
+=======
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+>>>>>>> master
   margin: 10px;
 
   .container:hover & {
