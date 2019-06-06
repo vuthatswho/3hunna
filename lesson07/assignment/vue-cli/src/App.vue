@@ -27,63 +27,7 @@
 
   <!-- Accordion Page -->
   <h2>Accordion</h2>
-  <!-- Accordion -->
-  <!-- Put accordion in 1x1 Grid to center on page -->
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <!-- begin accordion code -->
-        <div id="accordion">
-          <!-- Card: North -->
-          <div class="card">
-            <!-- Card header -->
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button v-for="accordion in accordions" class="btn btn-link" data-toggle="collapse" data-target="#north" aria-expanded="true" aria-controls="north">
-                  {{accordion.title}}
-                </button>
-              </h5>
-            </div>
-            <!-- Card body -->
-            <div id="north" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-              <div v-for="accordion in accordions" class="card-body">
-                {{accordion.body}}
-              </div>
-            </div>
-          </div>
-
-          <!-- Card: Central -->
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#central" aria-expanded="false" aria-controls="central">
-                </button>
-              </h5>
-            </div>
-            <div id="central" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="card-body">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card: South -->
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#south" aria-expanded="false" aria-controls="south">
-                </button>
-              </h5>
-            </div>
-            <div id="south" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end accordion -->
-      </div>
-    </div>
-  </div>
+  <app-accordion></app-accordion>
   <p>end page</p>
 
 </div>

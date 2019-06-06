@@ -1,4 +1,4 @@
-# lesson07-hw
+# assignment07
 
 > A Vue.js project
 
