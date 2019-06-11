@@ -23,8 +23,8 @@ Vue.component('accordion', {
 })
 
 Vue.component('blog-post', {
-  props: ['title'],
-  template: '<h3>{{ title }}</h3>'
+  props: ['post-title'],
+  template: '<h3>{{ postTitle }}</h3>'
 })
 
 import VueRouter from 'vue-router';

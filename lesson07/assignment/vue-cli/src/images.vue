@@ -1,7 +1,7 @@
 <template>
       <section class="hero_home">
           <article>
-            <h1>About</h1>
+            <h1>Images</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, aperiam doloremque possimus nemo incidunt, consequatur quidem facere in ipsam ratione quod? Provident laborum magnam accusantium sequi optio error sunt, sit.</p>
         </article>
             <img width="20%" height="25%" v-for="img in images" v-bind:src="img"/>

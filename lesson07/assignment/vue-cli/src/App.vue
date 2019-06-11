@@ -5,6 +5,9 @@
     <!-- App-header contains routers to all other page apps -->
     <app-header></app-header>
     <h1>The Portfolio</h1>
+    <blog-post post-title="hello"></blog-post>
+    <blog-post post-title="bye"></blog-post>
+    <blog-post post-title="welcome"></blog-post>
 
   </div>
 </template>

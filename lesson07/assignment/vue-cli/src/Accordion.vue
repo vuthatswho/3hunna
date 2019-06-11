@@ -34,13 +34,11 @@ export default {
 <style>
 body {
   background: #20262E;
-  padding: 20px;
   font-family: Helvetica;
 }
 
 #app {
   background: #fff;
-  padding: 20px;
 }
 .item-active p {
   color: black;
