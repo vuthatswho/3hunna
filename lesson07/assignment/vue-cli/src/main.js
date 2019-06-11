@@ -1,72 +1,42 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Accordion from './Accordion.vue';
-import VueRouter from 'vue-router';
+import Header from './Header.vue'
+import Images from './images.vue'
 
-Vue.component('app-accordion', Accordion);
+Vue.component('app-header', Header)
 
-Vue.component('app-accordion', {
-  template: '#accordion',
-  props: ['items'],
-  methods: {
-    openItem: function(item){
-        item.isopen = !  item.isopen
-    },
+// Vue.component('app-images', Images)
 
-    setClass: function(item){
-        if (item.isopen == true ) {
-          return 'open'
-        }
-        return 'close'
-    },
-
-    enter: function(el, done){
-        Velocity(el, 'slideDown', {duration: 400,
-                                   easing: "easeInBack"},
-                                  {complete: done})
-    },
-
-    leave: function(el, done){
-        Velocity(el, 'slideUp', {duration: 400,
-                                 easing: "easeInBack"},
-                                {complete: done})
-    },
-  },
+Vue.component('app-images', {
+  props: ['img-path'],
+  // template: '<img :src="img-path" class="img-fluid" alt="Responsive image" data-toggle="tooltip" data-placement="bottom" title="Details about the photo">'
 })
 
 
-
-var app = new Vue({
-    el: '#app',
-    data: {
-        items: [{
-            id: 1,
-            title: 'Audi',
-            content: 'Schärer Attorneys at Law advises and represents you on questions of unfair competition and the anti-trust law, for example, for company mergers, anti-trust investigations and for the drafting of distribution agreements.',
-            isopen: false
-        }, {
-            id:2,
-            title: 'BMW',
-            content: 'Civil law regulates privities of contract between private persons, communities of persons and corporations. On the other hand, constitutional, community and administrative law is concerned with the legal relationship between a private person and the community sector (federation, cantons, communities, associations of communities), or amongst communities. The specialists at Schärer Attorneys at Law act as advisers and consultants for private persons as well as communities, and represent them in the legal proceedings of objection and appeal.',
-            isopen: false
-        },
-        {
-            id:3,
-            title: 'Mercedes',
-            content: 'Our specialists in the fields of construction, planning and environmental law advise and represent builders, planners and architects, corporations, affected neighboring communities and associations of communities in:',
-            isopen: false
-        }]
+Vue.component('accordion', {
+  data: function () {
+    return {
+      count: 0
     }
+  },
+  template: ''
 })
 
+Vue.component('blog-post', {
+  props: ['title'],
+  template: '<h3>{{ title }}</h3>'
+})
+
+import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 import {routes} from './routes';
 const router = new VueRouter({
   routes,
-  mode:'history'
+  mode: 'history'
 })
 
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })
